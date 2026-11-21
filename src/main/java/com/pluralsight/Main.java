@@ -1,4 +1,5 @@
 
+
 package com.pluralsight;
 
 import java.math.BigDecimal;
@@ -65,6 +66,17 @@ public class Main {
             System.out.println("Date Acquired: " + asset.getDateAcquired());
             System.out.println("Original Cost: $" + asset.getOriginalCost());
             System.out.println("Current Value: $" + asset.getValue());
+
+            // Display additional information based on asset type
+            if (asset instanceof House) {
+                House house = (House) asset;
+                System.out.println("Address: " + house.getAddress());
+
+            } else if (asset instanceof Vehicle) {
+                Vehicle vehicle = (Vehicle) asset;
+                System.out.println("Year: " + vehicle.getYear());
+                System.out.println("Make/Model: " + vehicle.getMakeModel());
+            }
         }
     }
 }
