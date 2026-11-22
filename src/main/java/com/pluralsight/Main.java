@@ -52,6 +52,14 @@ public class Main {
                 120000
         );
 
+        Cash cash = new Cash(
+                "Emergency Cash",
+                "2026-11-22",
+                new BigDecimal("5000.00")
+        );
+        System.out.println("Cash Value: $" + cash.getValue());
+
+
         // Add everything to the ArrayList
         assets.add(house1);
         assets.add(house2);
@@ -78,5 +86,6 @@ public class Main {
                 System.out.println("Make/Model: " + vehicle.getMakeModel());
             }
         }
+
     }
 }
